@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingTop="15dp"
-            app:axis_align="LEFT_RIGHT"
+            app:axis_align="SINGLE_LEFT|SINGLE_RIGHT|LEFT_RIGHT" // 设置刻度标识位置,默认靠左
             app:axis_line_color="#000"
             app:axis_line_count="6"
             app:axis_line_height="1px"
@@ -43,6 +43,7 @@ Java代码中
             floatDatas.add(new Item("10/" + i, random.nextFloat()));
         }
         ItemList treeFloat = new ItemList(treeInfo, floatDatas);
+        
         // 设置图表方向, 类型
         treeFloat.setAxis(ItemList.AxisAlign.LEFT, ItemList.AxisValueType.FLOAT, max, min);
         treeFloat.setColor(0xFF3AFFDB);
