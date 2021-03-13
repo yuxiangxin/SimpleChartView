@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void configMultiChart () {
         ArrayList<ItemList> multiAxisData = new ArrayList<>();
 
-        // float树状图
+        // 构造圆角为4pd的的树状图
         ItemList.TreeInfo treeInfo = new ItemList.TreeInfo(dp2px(4), true);
         ArrayList<Item> floatDatas = new ArrayList<>();
         float min = 0;
@@ -50,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
             floatDatas.add(new Item("10/" + i, random.nextFloat()));
         }
         ItemList treeFloat = new ItemList(treeInfo, floatDatas);
+
+        // 设置图表刻度指示靠左, float类型, 显示范围
         treeFloat.setAxis(ItemList.AxisAlign.LEFT, ItemList.AxisValueType.FLOAT, max, min);
+        // 设置主要颜色
         treeFloat.setColor(0xFF3AFFDB);
         multiAxisData.add(treeFloat);
 
@@ -66,10 +69,11 @@ public class MainActivity extends AppCompatActivity {
         treeInt.setColor(0xFFC6C5FF);
         multiAxisData.add(treeInt);
 
-        // int折线图
+        // 构造宽度为2dp,连接点半径为4dp的折线图
         ItemList.LineInfo lineInfo = new ItemList.LineInfo(dp2px(2), dp2px(4));
         ArrayList<Item> lineData = new ArrayList<>(intData);
         ItemList lineList = new ItemList(lineInfo, lineData);
+        // 设置图表刻度线位置靠右, 刻度线值类型int, 最大值和最小值
         lineList.setAxis(ItemList.AxisAlign.RIGHT, ItemList.AxisValueType.INT, intMax, intMin);
         lineList.setColor(Color.RED);
         lineList.setShowTip(true);
@@ -89,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 7; i++) {
             data.add(new Item("10/" + i, random.nextFloat()));
         }
+        data.get(data.size() - 1).setValue(max);
+        data.get(0).setValue(min);
         ItemList rightAxisPercent = new ItemList(treeInfo, data);
         rightAxisPercent.setAxis(ItemList.AxisAlign.RIGHT, ItemList.AxisValueType.PERCENT, max, min);
         rightAxisPercent.setColor(0xFF3AFFDB);

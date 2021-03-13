@@ -382,20 +382,16 @@ public class ChartView extends View {
             float cx = (dstRectF.width() - treeCount * lineWidth) / 2;
             cx = cx + (current * lineWidth) + dstRectF.left;
             float cy = dstRectF.height() - (item.getValue() / axisMax * dstRectF.height()) + dstRectF.top;
-            if (item.getValue() > axisMin) {
+            if (item.getValue() > axisMin && cy < dstRectF.bottom) {
                 if (treeInfo.isTopRadius()) {
                     canvas.save();
-                    canvas.clipRect(cx, cy, cx + lineWidth, dstRectF.bottom, Region.Op.INTERSECT);
                     float radius = (float) lineWidth / 2;
-                    canvas.drawCircle(cx + radius, cy + radius, radius, paint);
+                    RectF f = new RectF(cx, cy, cx + lineWidth, dstRectF.bottom + radius);
+                    canvas.clipRect(dstRectF, Region.Op.INTERSECT);
+                    canvas.drawRoundRect(f, radius, radius, paint);
                     canvas.restore();
-                    if (cy + radius < dstRectF.bottom) {
-                        canvas.drawRect(cx, cy + radius, cx + lineWidth, dstRectF.bottom, paint);
-                    }
                 } else {
-                    if (cy < dstRectF.bottom) {
-                        canvas.drawRect(cx, cy, cx + lineWidth, dstRectF.bottom, paint);
-                    }
+                    canvas.drawRect(cx, cy, cx + lineWidth, dstRectF.bottom, paint);
                 }
             }
             if (data.isShowTip()) {
