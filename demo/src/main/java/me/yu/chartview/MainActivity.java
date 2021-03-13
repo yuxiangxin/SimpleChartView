@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void configMultiChart () {
         ArrayList<ItemList> multiAxisData = new ArrayList<>();
 
-        // 构造圆角为4pd的的树状图
+        // 构造圆角为4dp的的树状图
         ItemList.TreeInfo treeInfo = new ItemList.TreeInfo(dp2px(4), true);
         ArrayList<Item> floatDatas = new ArrayList<>();
         float min = 0;
