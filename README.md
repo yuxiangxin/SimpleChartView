@@ -4,10 +4,10 @@
 图表大部分属性均可以设置, 如 刻度线颜色,宽度, 颜色等属性
 
 
-## 截图
+## 效果展示u
 ![0](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/screenshot.png)
 
-## APP体验
+## APP下载体验
 [下载](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/SimpleChart.apk)
 
 
@@ -30,7 +30,7 @@
             app:item_parent_margin="10dp" />
             
 
-Java代码中
+设置示例
 
          private void configMultiChart () {
             ArrayList<ItemList> multiAxisData = new ArrayList<>();
