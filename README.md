@@ -4,7 +4,7 @@
 图表大部分属性均可以设置, 如 刻度线颜色,宽度, 颜色等属性
 
 
-## 效果展示u
+## 效果展示
 ![0](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/screenshot.png)
 
 ## APP下载体验
