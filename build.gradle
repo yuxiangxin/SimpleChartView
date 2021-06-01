@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         //classpath "com.android.tools.build:gradle:4.1.1"
         
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,11 +22,15 @@ allprojects {
         maven {
             url 'http://maven.aliyun.com/nexus/content/groups/public'
         }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
         google()
         jcenter()
         
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

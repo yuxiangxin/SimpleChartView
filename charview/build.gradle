@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='org.xiangxin'
 
 android {
     compileSdkVersion 29
@@ -21,7 +25,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
