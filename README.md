@@ -18,7 +18,7 @@
 ```
 2. 添加依赖
 ```gradle 
-    implementation 'com.github.yuxiangxin:SimpleChartView:v1.0'
+    implementation 'com.github.yuxiangxin:SimpleChartView:1.0'
 ```
 
 ### 调用示例代码
