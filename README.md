@@ -6,8 +6,20 @@
 ## 效果示例
 ![0](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/screenshot.png)
 
-## APP下载体验
-[下载](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/SimpleChart.apk)
+## Dependency
+1. 添加 jitpack仓库地址到项目build.gradle文件仓库
+```gradle 
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+2. 添加依赖
+```gradle 
+    implementation 'com.github.yuxiangxin:SimpleChartView:v1.0'
+```
 
 ### 调用示例代码
 
