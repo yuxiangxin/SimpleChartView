@@ -1,12 +1,12 @@
-## SimpleChartView说明
+# SimpleChartView说明
 
 简介:一个可以显示折线图, 树状图 的简单图表UI控件, 可以设置刻度标识位置, 支持同时显示多个数据. 
 图表大部分属性均可以设置, 如 刻度线颜色,宽度, 颜色等属性
 
-## 效果示例
+## 效果展示
 ![0](https://github.com/yuxiangxin/SimpleChartView/blob/master/ext/screenshot.png)
 
-## Dependency
+## Gradle依赖
 1. 添加 jitpack仓库地址到项目build.gradle文件仓库
 ```gradle 
 	allprojects {
@@ -21,7 +21,7 @@
     implementation 'com.github.yuxiangxin:SimpleChartView:1.0'
 ```
 
-### 调用示例代码
+## 示例代码
 
 ```xml
 <me.yu.charview.ChartView
